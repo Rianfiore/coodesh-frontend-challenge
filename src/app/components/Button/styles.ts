@@ -1,4 +1,4 @@
-import { joinStyles } from "@/utils/joinStyles";
+import { joinStyles } from "@/utils";
 import { ButtonProps } from "./types";
 
 export function buttonStyles({ variant = "default" }: Partial<ButtonProps>) {
