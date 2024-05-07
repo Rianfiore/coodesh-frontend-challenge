@@ -22,8 +22,7 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/app/*"],
-      "@/assets/*": ["public/assets/*"],
-      "@/styles/*": ["./src/styles/*"]
+      "@/assets/*": ["public/assets/*"]
     }
   },
   "include": [
