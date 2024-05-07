@@ -15,6 +15,8 @@ const config: Config = {
   collectCoverageFrom: [
     "src/app/{components,hooks}/**/*.tsx",
     "src/app/utils/**/*.ts",
+    "!src/app/utils/index.ts",
+    "!src/app/icons/**",
   ],
 };
 

@@ -21,8 +21,7 @@
     ],
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/app/*"],
-      "@/assets/*": ["public/assets/*"]
+      "@/*": ["./src/app/*"]
     }
   },
   "include": [
