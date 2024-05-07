@@ -13,14 +13,8 @@ const config: Config = {
   setupFilesAfterEnv: ["<rootDir>/jest.setup.js"],
   preset: "ts-jest",
   collectCoverageFrom: [
-    "src/**/*.{ts,tsx}",
-    "!src/**/*.d.ts",
-    "!**/*.d.ts",
-    "!**/node_modules/**",
-    "!<rootDir>/out/**",
-    "!<rootDir>/.next/**",
-    "!<rootDir>/*.config.js",
-    "!<rootDir>/coverage/**",
+    "src/app/{components,hooks}/**/*.tsx",
+    "src/app/utils/**/*.ts",
   ],
 };
 
