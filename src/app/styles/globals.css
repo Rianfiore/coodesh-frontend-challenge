@@ -10,3 +10,24 @@
   font-weight: 400;
   transition: all 0.2s ease-in-out;
 }
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+div,
+a,
+li,
+td,
+th,
+button,
+input,
+textarea,
+select,
+option {
+  color: #393b3d;
+}
