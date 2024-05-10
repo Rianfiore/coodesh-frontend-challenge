@@ -11,13 +11,16 @@ const customJestConfig = {
   testEnvironment: "jsdom",
 
   collectCoverageFrom: [
-    "src/app/{components,hooks}/**/*.tsx",
+    "src/app/**/*.tsx",
+    "src/app/**/*.test.tsx",
     "src/app/utils/**/*.ts",
     "!src/app/utils/index.ts",
     "!src/app/icons/**",
+    "!src/app/**/layout.tsx",
   ],
   moduleNameMapper: {
     "^@/(.*)$": "<rootDir>/src/app/$1",
+    "^@/assets/(.*)$": "<rootDir>/public/$1",
   },
 };
 
