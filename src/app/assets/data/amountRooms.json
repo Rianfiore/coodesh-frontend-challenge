@@ -1,0 +1,27 @@
+[
+  {
+    "id": 0,
+    "value": "Todos",
+    "text": null
+  },
+  {
+    "id": 1,
+    "value": "1+",
+    "text": "1+ Quartos"
+  },
+  {
+    "id": 2,
+    "value": "2+",
+    "text": "2+ Quartos"
+  },
+  {
+    "id": 3,
+    "value": "3+",
+    "text": "3+ Quartos"
+  },
+  {
+    "id": 4,
+    "value": "4+",
+    "text": "4+ Quartos"
+  }
+]
