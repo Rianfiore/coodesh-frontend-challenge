@@ -6,12 +6,17 @@ const originalConsoleWarning = console.warn;
 
 // Esse erro é um problema de incompatibilidade entre as versões do Next, React e Jest. Muitas pessoas estão reclamando desse mesmo problema, e não encontrei nenhuma solução definitiva. Então, criei isso para ignorar a mensagem de erro.
 beforeEach(() => {
-  console.error = (message) => {
+  jest.clearAllMocks();
 
+  console.error = (message) => {
     if (
-      !message.includes("React does not recognize the `fetchPriority` prop")
+      !String(message).includes(
+        "React does not recognize the `fetchPriority` prop"
+      )
     ) {
       console.error = jest.fn();
+    } else {
+      console.error(message);
     }
   };
 
