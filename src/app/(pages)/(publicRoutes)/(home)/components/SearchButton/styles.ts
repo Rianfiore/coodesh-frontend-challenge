@@ -10,6 +10,8 @@ export function searchButtonStyles() {
     rounded-full
     text-neutral-white
     font-semibold
+    w-full
+    max-w-[500px]
     `,
     hover: `
     hover:bg-support-orange300

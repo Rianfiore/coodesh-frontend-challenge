@@ -5,6 +5,7 @@ export function container() {
     base: `
     flex
     flex-col
+    items-center
     gap-6
     pt-8
     pb-10
