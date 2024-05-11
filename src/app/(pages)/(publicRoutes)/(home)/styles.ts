@@ -10,3 +10,14 @@ export function headerStyles() {
 
   return joinStyles(styles);
 }
+
+export function mainStyles() {
+  const styles = {
+    base: `
+    flex
+    flex-col
+    `,
+  };
+
+  return joinStyles(styles);
+}

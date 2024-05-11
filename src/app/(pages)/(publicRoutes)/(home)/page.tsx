@@ -4,7 +4,7 @@ import { useCurrentBreakpoint } from "@/hooks";
 import { defaultTheme } from "@/styles/theme";
 import { convertPixelIntoNumber } from "@/utils";
 import { headerStyles } from "./styles";
-import { Hero, NavBar, SearchSection } from "./templates";
+import { AnnouncementSection, Hero, NavBar, SearchSection } from "./templates";
 
 export default function Home() {
   const currentBreakpoint = useCurrentBreakpoint();
@@ -23,7 +23,9 @@ export default function Home() {
           <>{shouldRenderSearchSection && <SearchSection />}</>
         )}
       </header>
-      <main></main>
+      <main>
+        <AnnouncementSection />
+      </main>
     </>
   );
 }
