@@ -1,81 +1,52 @@
-# Front-end Challenge - Netimóveis 20240110
+# Netimóveis - Plataforma de Busca de Imóveis
 
-## Introdução
+### Descrição
 
-Este é o nosso case técnico para Front-end! A ideia é que você possa mostrar toda sua expertise técnica através dele :D
-Estamos animados para te ver brilhar novamente!
+Desenvolvido com Next.js e estilizado com Tailwind CSS, o projeto combina performance e elegância, proporcionando uma jornada imersiva e responsiva de busca de imóveis envolvente e agradável.
 
-[SPOILER] As instruções de entrega e apresentação do challenge estão no final deste Readme (=
+### Processo investigativo:
 
-### Antes de começar
+Ao mergulhar no desafio proposto, meu primeiro passo foi explorar o design system do projeto no Figma. Analisei minuciosamente os componentes disponíveis e as diretrizes de design, buscando identificar elementos que poderiam ser componentizados e reaproveitados, levando em conta também a paleta de cores definida.
 
-- Prepare o projeto para ser disponibilizado no Github, copiando o conteúdo deste repositório para o seu (ou utilize o fork do projeto e aponte para o Github). Confirme que a visibilidade do projeto é pública (não esqueça de colocar no readme a referência a este challenge);
-- O projeto deve utilizar a Linguagem específica ou Framework na sua Vaga (caso esteja se candidatando). Por exempo: Next.js, React e entre outras;
-- Considere como *deadline 5 dias a partir do início do desafio*. Caso tenha sido convidado a realizar o teste e não seja possível concluir dentro deste período, avise a pessoa que o convidou para receber instruções sobre o que fazer.
-- Documentar todo o processo de investigação para o desenvolvimento da atividade (README.md no seu repositório); os resultados destas tarefas são tão importantes do que o seu processo de pensamento e decisões à medida que as completa, por isso tente documentar e apresentar os seus hipóteses e decisões na medida do possível.
+Com o design em mente, passei a considerar quais tecnologias e metodologias seriam mais adequadas para o desenvolvimento, levando em consideração o prazo limitado, uma vez que tenho compromissos profissionais e acadêmicos. Aqui estão algumas das ideias iniciais que surgiram:
 
-### Instruções iniciais obrigatórias
+1- Criar uma Fake API para simular as requisições cliente/servidor.
 
-- Utilizar o framework Next.js (opte pela versão que preferir)
-- Utilizar o framework Tailwind CSS para a UI (pode usar outros, porém, conta muito para nós usar o Tailwind CSS ) ♥
-- Utilizar classes para os dados.
-- Seguir o protótipo da tela
-- 
+2- Implementar a Fake API com uma arquitetura limpa para garantir escalabilidade, organização e boas práticas do conceito SOLID.
 
-### Será um enorme **diferencial** para a gente se você: 
-- Optar por usar **TypeScript**.
-- Aplicar **Testes Unitários** em Componentes.
+2- Estabelecer um Design System utilizando o Storybook, integrado com testes unitários, visando facilitar a manutenção e reutilização de componentes em futuros projetos da NetImóveis.
 
-### Instruções
+3- Implementar testes de integração para validar os fluxos de ações na aplicação.
 
-Vamos disponibilizar para você dois JSONs como fonte de dados. 
+4- Incorporar animações com LottieJS para enriquecer a experiência de usuário.
 
-- Um será o [place.json](./assets/place.json), que contém as informações de 5 cidades brasileiras. 
-- O segundo será o [flats.json](./assets/flats.json), nele está o relacionamento cidade versus hotéis.
+Considerando os requisitos obrigatórios e a limitação de tempo, adaptei minhas estratégias. Optei por desenvolver o projeto em Next.js e utilizar o Tailwind CSS, ambos fundamentais para atender às especificações. Decidi também adotar o processo de Desenvolvimento Orientado a Testes (TDD) em TypeScript, visando garantir a qualidade do código e facilitar sua manutenção no futuro. Além disso, escolhi o Swiper como biblioteca para o carrossel de imagens, aproveitando sua eficiência e flexibilidade.
 
-`Também iremos disponibilizar o protótipo da tela que você deverá nos entregar.`
+Apesar dos desafios impostos pelo prazo, considero que o projeto foi uma oportunidade enriquecedora. Gostaria de parabenizar a equipe de Design pelo excelente trabalho no Figma e, como sugestão de melhoria, proponho a criação de um mini design system para padronizar os tokens de design, contribuindo para uma consistência visual em futuras iterações do produto.
 
-### Home
+### Frameworks e Libs
 
-Estude o Figma para trabalhar no projeto com os requisitos essênciais:
+1- Typescript 
+2- NextJS
+2- TailwindCSS
+3- Swiper
+4- Testes Unitários com Jest e RTT
 
-[Figma](https://www.figma.com/file/Bbwa2wakxxcUMZB4Y4nXke/Teste-Coodesh?type=design&t=gJx1Cj6soxAtWvks-6)
+### Instruções de Instalação e Uso:
 
-#### Formulário
+Clone o repositório do projeto do GitHub.
+Certifique-se de ter o Node.js instalado em sua máquina.
+Instale as dependências do projeto utilizando o comando `yarn install`.
+Execute o projeto localmente com o comando `yarn dev`.
+Acesse a aplicação em seu navegador utilizando o endereço local fornecido.
 
-- O campo Localização deverá listar as opções no formato 'Belo Horizonte, Minas Gerais'. Quando selecionada uma opção, ela deverá ser exibida como 'Belo Horizonte, BH'.
-- O campo Nº de Quartos deverá ser um Dropdown para informar a quantidade e selecionar os Tipos
-- O botão deverá 'Buscar' terar alguns comportamentos ao passar o Mouse, seguindo as especificações do Figma
+#### Testes unitários - Aprox. 94% de cobertura:
 
-#### Listagem
-- Apresente as imagens do imóveis em um carrossel.
+Rode o comando `yarn test` para iniciar os testes.
+Rode o comando `yarn test:cov` para visualizar a cobertura dos testes.
 
-### Extras
-- Desenhar os demais elementos da página
-- Trabalhar com testes unitários
-- Header flutuante
+### Referência:
 
-## Readme do Repositório
+Este é um desafio proposto pela Coodesh, adaptado para demonstrar habilidades técnicas e criativas na construção de uma aplicação de busca de imóveis
 
-- Deve conter o título do projeto
-- Uma descrição sobre o projeto em frase
-- Deve conter uma lista com linguagem, framework e/ou tecnologias usadas
-- Como instalar e usar o projeto (instruções)
-- Não esqueça o [.gitignore](https://www.toptal.com/developers/gitignore)
-- Se está usando github pessoal, referencie que é um challenge by coodesh:
-
->  This is a challenge by [Coodesh](https://coodesh.com/)
-
-## Finalização e Instruções para a Apresentação
-
-1. Adicione o repositório na avaliação
-2. Verifique se o Readme está bom e faça o commit final;
-3. Ao finalizar a entrega do código, enviar para a avaliação no botão "Enviar Código" na parte superior da avaliação
-4. Apresentar o resultado da sua entrega, você terá as instruções para apresentação após "Enviar Código".
-
-## Suporte
-
-Use o nosso canal no slack: http://bit.ly/32CuOMy para tirar dúvidas sobre o processo ou envie um e-mail para contato@coodesh.com.
-
-
-
+This is a challenge by [Coodesh](https://coodesh.com/)
