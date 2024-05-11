@@ -10,6 +10,7 @@ export const defaultTheme = {
       black: "#00000",
     },
     support: {
+      blue300: "#2362AF",
       purple100: "#A77FF7",
       purple200: "#652D91",
       purple300: "#3C1053",
