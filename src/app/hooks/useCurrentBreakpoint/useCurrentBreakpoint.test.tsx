@@ -1,17 +1,16 @@
-import { useCurrentBreakpointMock } from "@/__mocks__/hooks/useCurrentBreakpoint";
+import { useCurrentBreakpointMock } from "@/__mocks__/hooks";
+import { defaultTheme } from "@/styles/theme";
+import { convertPixelIntoNumber } from "@/utils";
 import { act, renderHook } from "@testing-library/react";
 import { useCurrentBreakpoint } from ".";
 
 describe("useCurrentBreakpoint hook", () => {
-  Object.defineProperty(window, "outerWidth", {
+  Object.defineProperty(window.screen, "width", {
     writable: true,
     configurable: true,
-    value: useCurrentBreakpointMock.initialConfig.value,
+    value: useCurrentBreakpointMock.initialConfig.screenSize,
   });
 
-  beforeEach(() => {
-    jest.clearAllMocks();
-  });
   test("should return correct breakpoint on initial render", () => {
     const { result } = renderHook(() => useCurrentBreakpoint());
 
@@ -19,22 +18,25 @@ describe("useCurrentBreakpoint hook", () => {
   });
 
   test("should update breakpoint when window is resized", () => {
-    const { result } = renderHook(() => useCurrentBreakpoint());
+    const { result, rerender } = renderHook(() => useCurrentBreakpoint());
 
     //Breakpoint para tablet de acordo com o tema
-    Object.defineProperty(window, "outerWidth", {
+    Object.defineProperty(window, "innerWidth", {
       writable: true,
       configurable: true,
-      value: 640,
+      value: convertPixelIntoNumber(defaultTheme.screens.HD),
     });
 
     act(() => {
       window.dispatchEvent(new Event("resize"));
     });
 
+    rerender();
+
     expect(result.current).toEqual({
-      name: "tablet",
-      value: 640,
+      screenSize: convertPixelIntoNumber(defaultTheme.screens.HD),
+      breakpointName: "HD",
+      breakpointValue: convertPixelIntoNumber(defaultTheme.screens.HD),
     });
   });
 });
