@@ -4,7 +4,7 @@ export function roomDropdownStyles() {
   const styles = {
     base: `
     absolute
-    translate-y-[88px]
+    translate-y-[80px]
     z-10
     flex
     flex-col
