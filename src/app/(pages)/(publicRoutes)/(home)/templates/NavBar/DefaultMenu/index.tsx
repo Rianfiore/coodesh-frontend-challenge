@@ -1,4 +1,4 @@
-import { Button } from "@/components/Button";
+import { Button } from "@/components";
 import { Arrow } from "@/icons";
 import Link from "next/link";
 import {
@@ -21,7 +21,7 @@ export function DefaultMenu() {
       </ul>
 
       <span className={buttonsContainerStyles()}>
-        <Button variant="full-rounded">Anunciar Imóvel</Button>
+        <Button border="full-rounded">Anunciar Imóvel</Button>
         <Link href="">Entrar</Link>
       </span>
     </span>

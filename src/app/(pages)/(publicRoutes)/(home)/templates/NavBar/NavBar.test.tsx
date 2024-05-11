@@ -1,3 +1,5 @@
+import { defaultTheme } from "@/styles/theme";
+import { convertPixelIntoNumber } from "@/utils";
 import { act, render } from "@testing-library/react";
 import { NavBar } from ".";
 
@@ -14,10 +16,10 @@ describe("NavBar component", () => {
     const { getByTestId } = render(<NavBar />);
 
     //Breakpoint para laptop de acordo com o tema
-    Object.defineProperty(window, "outerWidth", {
+    Object.defineProperty(window, "innerWidth", {
       writable: true,
       configurable: true,
-      value: 800,
+      value: convertPixelIntoNumber(defaultTheme.screens.laptop),
     });
 
     act(() => {
@@ -33,10 +35,10 @@ describe("NavBar component", () => {
     const { getByTestId } = render(<NavBar />);
 
     //Breakpoint para laptop de acordo com o tema
-    Object.defineProperty(window, "outerWidth", {
+    Object.defineProperty(window, "innerWidth", {
       writable: true,
       configurable: true,
-      value: 1200,
+      value: convertPixelIntoNumber(defaultTheme.screens.laptop) + 1,
     });
 
     act(() => {
