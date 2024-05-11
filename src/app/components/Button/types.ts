@@ -1,5 +1,5 @@
-export interface ButtonProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+export interface ButtonProps {
+  border?: "full-rounded" | "default";
   children: string;
-  variant?: "full-rounded" | "default";
+  onClick?: () => void;
 }

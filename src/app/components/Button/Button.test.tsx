@@ -1,4 +1,4 @@
-import { buttonMock } from "@/__mocks__/components/button";
+import { buttonMock } from "@/__mocks__/components";
 import { render } from "@testing-library/react";
 import { Button } from ".";
 

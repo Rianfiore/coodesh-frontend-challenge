@@ -1,13 +1,12 @@
 import { buttonStyles } from "./styles";
 import { ButtonProps } from "./types";
 
-export function Button({ variant = "default", ...props }: ButtonProps) {
-  const { className, ...restProps } = props;
+export function Button({ border = "default", ...props }: ButtonProps) {
   return (
     <button
       data-testid="button"
-      className={buttonStyles({ variant })}
-      {...restProps}
+      className={buttonStyles({ border })}
+      {...props}
     >
       {props.children}
     </button>

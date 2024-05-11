@@ -1,7 +1,9 @@
 import { joinStyles } from "@/utils";
 import { ButtonProps } from "./types";
 
-export function buttonStyles({ variant = "default" }: Partial<ButtonProps>) {
+export function buttonStyles({
+  border = "default",
+}: Partial<ButtonProps>) {
   const styles = {
     base: `
       flex
@@ -12,21 +14,21 @@ export function buttonStyles({ variant = "default" }: Partial<ButtonProps>) {
       py-1
 
       border
-      border-support-purple
+      border-support-purple200
 
-      text-support-purple
+      text-support-purple200
       font-semibold
     `,
     hover: `
-    hover:bg-support-purple
+    hover:bg-support-purple200
       hover:text-neutral-white
     `,
     active: `
-    active:bg-support-purpleDark
+    active:bg-support-purple300
     `,
   };
 
-  const variantStyles = {
+  const borderStyles = {
     "full-rounded": `
       rounded-full
     `,
@@ -35,5 +37,5 @@ export function buttonStyles({ variant = "default" }: Partial<ButtonProps>) {
     `,
   };
 
-  return joinStyles(styles, variantStyles[variant]);
+  return joinStyles(styles, borderStyles[border]);
 }
