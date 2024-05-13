@@ -4,15 +4,15 @@ import { Bed } from "@/icons";
 import { defaultTheme } from "@/styles/theme";
 import { convertPixelIntoNumber } from "@/utils";
 import { useEffect, useState } from "react";
-import { AmountRoomOptionType } from "../AmountRoomOption/types";
 import { RoomDropdown } from "../RoomDropdown";
 import { RoomSearchProps } from "./types";
+import { RoomItemType } from "@/types";
 
 export function RoomSearch({
   isHovered = false,
   onInputChange,
 }: RoomSearchProps) {
-  const [selectedItem, setSelectedItem] = useState<AmountRoomOptionType>({
+  const [selectedItem, setSelectedItem] = useState<RoomItemType>({
     id: 0,
     text: null,
     value: "Todos",
@@ -24,7 +24,7 @@ export function RoomSearch({
     convertPixelIntoNumber(defaultTheme.screens.laptop);
   const dropdownVariant = isMobile ? "mobile" : "default";
 
-  function handleSelectedItem(item: AmountRoomOptionType) {
+  function handleSelectedItem(item: RoomItemType) {
     setIsDropdownOpened(false);
     setSelectedItem(item);
   }

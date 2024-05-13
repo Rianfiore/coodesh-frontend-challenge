@@ -1,4 +1,4 @@
-import { AmountRoomOptionType } from "../AmountRoomOption/types";
+import { RoomItemType } from "@/types";
 
 export interface RoomDropdownItemProps
   extends React.HTMLAttributes<HTMLSpanElement> {
@@ -9,6 +9,6 @@ export interface RoomDropdownItemProps
 export interface RoomDropdownProps {
   variant?: "default" | "mobile";
   onClose: () => void;
-  onSelectItem: (item: AmountRoomOptionType) => void;
-  selectedAmountRoomsOption: AmountRoomOptionType;
+  onSelectItem: (item: RoomItemType) => void;
+  selectedAmountRoomsOption: RoomItemType;
 }
